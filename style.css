@@ -1,0 +1,229 @@
+
+:root {
+  --ink: #1c2b1e;
+  --paper: #f7f4ec;
+  --accent: #b6752b;
+  --accent-dark: #8a5620;
+  --line: #d8d0bc;
+  --maxw: 1080px;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: 'Georgia', 'Times New Roman', serif;
+  background: var(--paper);
+  color: var(--ink);
+  line-height: 1.6;
+}
+
+header.site-header {
+  background: var(--ink);
+  color: var(--paper);
+  padding: 0;
+  border-bottom: 4px solid var(--accent);
+}
+
+.header-inner {
+  max-width: var(--maxw);
+  margin: 0 auto;
+  padding: 1.4rem 1.5rem 1rem;
+}
+
+.brand {
+  display: flex;
+  align-items: baseline;
+  gap: .6rem;
+  flex-wrap: wrap;
+}
+
+.brand h1 {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-size: 1.7rem;
+  letter-spacing: .04em;
+  margin: 0;
+  font-weight: 700;
+}
+
+.brand span {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-size: .85rem;
+  color: #cbb98a;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+}
+
+nav.main-nav {
+  background: var(--accent-dark);
+}
+
+nav.main-nav ul {
+  max-width: var(--maxw);
+  margin: 0 auto;
+  display: flex;
+  list-style: none;
+  padding: 0;
+  flex-wrap: wrap;
+}
+
+nav.main-nav li { position: relative; }
+
+nav.main-nav a {
+  display: block;
+  padding: .8rem 1.1rem;
+  color: #f7f4ec;
+  text-decoration: none;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-size: .92rem;
+  letter-spacing: .03em;
+  transition: background .15s ease;
+}
+
+nav.main-nav a:hover,
+nav.main-nav a.active {
+  background: var(--accent);
+}
+
+nav.main-nav .has-children:hover .dropdown { display: block; }
+
+.dropdown {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: var(--accent-dark);
+  min-width: 200px;
+  box-shadow: 0 6px 14px rgba(0,0,0,.25);
+  z-index: 10;
+}
+
+.dropdown a {
+  border-top: 1px solid rgba(255,255,255,.12);
+  white-space: nowrap;
+}
+
+main {
+  max-width: var(--maxw);
+  margin: 0 auto;
+  padding: 2.6rem 1.5rem 3.5rem;
+  min-height: 50vh;
+}
+
+.hero {
+  background: linear-gradient(135deg, #2b3d2e 0%, #1c2b1e 100%);
+  color: var(--paper);
+  padding: 3rem 1.5rem;
+  margin-bottom: 2.5rem;
+  border-radius: 2px;
+}
+
+.hero-inner {
+  max-width: var(--maxw);
+  margin: 0 auto;
+}
+
+.hero h2 {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-size: 2rem;
+  margin: 0 0 .6rem;
+}
+
+.hero p {
+  font-size: 1.05rem;
+  color: #d8d0bc;
+  max-width: 600px;
+}
+
+h2.page-title {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-size: 1.9rem;
+  border-bottom: 3px solid var(--accent);
+  padding-bottom: .5rem;
+  margin-bottom: 1.5rem;
+  display: inline-block;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.4rem;
+  margin: 1.8rem 0;
+}
+
+.card {
+  background: #fff;
+  border: 1px solid var(--line);
+  padding: 1.4rem;
+  border-left: 4px solid var(--accent);
+}
+
+.card h3 {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  margin-top: 0;
+  font-size: 1.1rem;
+}
+
+.contact-box {
+  background: #fff;
+  border: 1px solid var(--line);
+  padding: 1.6rem 1.8rem;
+  margin-top: 1.5rem;
+  max-width: 420px;
+}
+
+.contact-box dt {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-size: .8rem;
+  text-transform: uppercase;
+  letter-spacing: .06em;
+  color: var(--accent-dark);
+  margin-top: .9rem;
+}
+
+.contact-box dd { margin: .1rem 0 0; }
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.gallery-grid .placeholder {
+  aspect-ratio: 4/3;
+  background: repeating-linear-gradient(45deg, #e7e0cc, #e7e0cc 10px, #ded5ba 10px, #ded5ba 20px);
+  border: 1px solid var(--line);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #7a6f52;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-size: .8rem;
+}
+
+.note {
+  background: #fff8e6;
+  border: 1px solid #e6cf8f;
+  padding: .9rem 1.1rem;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-size: .85rem;
+  color: #6b5218;
+  margin-top: 1rem;
+}
+
+footer.site-footer {
+  background: var(--ink);
+  color: #b7ad91;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-size: .82rem;
+  text-align: center;
+  padding: 1.6rem 1rem;
+}
+
+footer.site-footer a { color: #d8cba3; }
+
+@media (max-width: 600px) {
+  nav.main-nav ul { flex-direction: column; }
+  .dropdown { position: static; box-shadow: none; }
+}
